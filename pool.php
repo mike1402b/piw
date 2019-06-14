@@ -9,18 +9,18 @@ GPIO 23 schalten:
 <input type="submit" value="Licht aus" name="Lichtaus">
 </form>
 <?php
-$modeon18 = trim(@shell_exec("/usr/local/bin/gpio -g mode 23 out"));
+$modeon18 = exec("gpio mode 23 out");
 if(isset($_GET["Lichtein"])){
-$val = trim(@shell_exec("/usr/local/bin/gpio -g write 23 1"));
+$val = exec("gpio write 23 1");
 echo "Licht an";
 }
 else if(isset($_GET["Lichtaus"])){
-$val = trim(@shell_exec("/usr/local/bin/gpio -g write 23 0"));
+$val = exec("gpio write 23 0");
 echo "Licht aus";
 }
 
 echo "<hr/>";
-$val = trim(@shell_exec("/usr/local/bin/gpio -g read 23"));
+$val = exec("gpio read 23");
 //$val = "test";
 echo " gpio23 hat $val ";
 print($val);
