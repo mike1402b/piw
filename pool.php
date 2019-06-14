@@ -21,18 +21,9 @@ echo "Licht aus";
 
 echo "<hr/>";
 $val = exec("gpio read 23");
-//$val = "test";
-echo " gpio23 hat $val ";
-print($val);
+echo " gpio23 = $val ";
 echo " <hr />"
 
-//$value = trim(@shell_exec("cat /sys/class/gpio/gpio17/value"));
-//print($value);
-
-
-//exec("gpio -1 mode 23 in");
-//$state = exec("gpio -1  read 23");
-//echo "<p>Pin 21 des J8-Headers hat den Zustand $state";
 
 ?>
 </body>
