@@ -5,7 +5,9 @@
 </head>
 <body>
   <h1>gpio read</h1>
-  <p>version vom 20190617 1352</P>
+  <p>version vom 20190617 1352<br/>
+    aktuelles Datum: <?php echo date("d.m.Y H:i:s"); ?>
+  </P>
   <table border =1>
     <tr><td>18 =</td><td><?php echo exec("gpio -g read 18");?></td></tr>
     <tr><td>23 =</td><td><?php echo exec("gpio -g read 23");?></td><td>pumpe</td></tr>
